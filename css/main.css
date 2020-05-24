@@ -10,12 +10,13 @@ body {
 	font-size: 1em;
 }
 
-.container{
+.container {
+	max-width: 1200px;
+	width: 90%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	max-width: 1200px;
-	margin: 0 auto;
+	flex-flow: row wrap;
 }
 
 h1,
@@ -42,31 +43,33 @@ h4 {
 p {
 	font-size: 0.875em;
 	line-height: 21px;
-    padding: 0 30px;
+    padding: 0 30px; /*NOT IN SOLUTION*/
 }
 
 /*The widths are in a percentage!*/
 header {
-	height: 110px;
 	border-bottom: 3px solid #77a466;
-	margin: 0 auto;
+	width: 100%;
+	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 }
 
 header h1 {
-	float: left;
 	margin: 0;
-	padding: 38px 0;
+	padding: 38px 20px 20px 20px;
+	width: 100%;
+	border-bottom: 3px solid #77a466;
 }
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
-	float: right;
-	padding: 46px 0;
+	width: 100%;
+	padding: 20px 0;
 }
 header nav ul {
 	margin: 0;
@@ -87,11 +90,10 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
-	margin: 0 auto;
-	clear: both;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 }
 
 .main-image {
@@ -170,10 +172,41 @@ footer {
 	display: flex;
 	justify-content: center;
 	text-align: center;
+	flex-direction: row;
 }
+
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+@media only screen and (min-width 768px) {
+	.bottom-section {
+		align-items: flex-start;
+		justify-content: space-between;
+	    border-top: 1px solid #eee;	
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		border-top: none;
+		flex-basis: 30%;
+	}
+
+	.section-two {
+		border-left:1px solid #eee;
+		border-right: 1px solid #eee;
+		padding: 0 20px;
+	}
+
+}
+
+@media only screen and (min-width 1200px) {
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
 }
