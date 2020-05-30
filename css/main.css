@@ -36,14 +36,9 @@ h2 {
 h3 {
 	font-size: 1.125em;
 }
-h4 {
-	font-size: 0.75em;
-}
 
 p {
 	font-size: 0.875em;
-	line-height: 21px;
-    padding: 0 30px; /*NOT IN SOLUTION*/
 }
 
 /*The widths are in a percentage!*/
@@ -74,13 +69,14 @@ header nav {
 header nav ul {
 	margin: 0;
 	padding: 0;
+	flex-direction: column;
 }
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 0.875em;
-	padding: 0 10px;
-	display: inline;
+	padding: 10px;
+	list-style-type: none;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -98,7 +94,6 @@ header nav ul li a{
 
 .main-image {
 	height: auto;
-	float: left;
 }
 .main-image img {
 	width: 100%;
@@ -107,7 +102,6 @@ header nav ul li a{
 
 .main-title {
 	height: auto;
-	float: left;
 }
 .main-title h3 {
 	text-align: left;
@@ -117,30 +111,19 @@ header nav ul li a{
 .main-title p {
 	padding: 0;
 	font-size: 1em;
-	line-height: 25px;
+	line-height: 1.562em;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
+	width: 100%;
 	height: auto;
-	float: left;
 	border-top: 1px solid #eee;
 }
 
-.section-one h4 {
-	padding: 10px 0;
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
-.section-two h4,
-.section-three h4 {
-	padding: 10px 30px;
+.section-three {
+	border-bottom: 1px solid #eee;
 }
 
 .menu {
@@ -155,18 +138,19 @@ header nav ul li a{
 .reviews {
 	color: #333;
 	font-size: 1em;
-	line-height: 21px;
+	line-height: 1.562em;
+	padding: 0;
 }
 
 .address {
 	font-size: 1em;
-	line-height: 24px;
+	line-height: 1.5em;
+	padding: 0;
 }
 
 /*The widths are in a percentage!*/
 footer {
-	height: 50px;
-	border-top: 3px solid #eee;
+	height: 3.125em;
 	margin: 0 auto;
 	clear: both;
 	display: flex;
@@ -182,7 +166,8 @@ footer span {
 	font-size: 0.875em;
 }
 
-@media only screen and (min-width 768px) {
+
+@media only screen and (min-width: 768px) {
 	.bottom-section {
 		align-items: flex-start;
 		justify-content: space-between;
@@ -204,7 +189,7 @@ footer span {
 
 }
 
-@media only screen and (min-width 1200px) {
+@media only screen and (min-width: 1200px) {
     header nav ul {
         display: flex;
         justify-content: space-between;
